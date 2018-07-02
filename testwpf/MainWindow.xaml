@@ -1,0 +1,31 @@
+﻿<Controls:MetroWindow x:Class="testwpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:local="clr-namespace:testwpf"
+        mc:Ignorable="d"
+        Title="Хочу спать" 
+        Height="472" 
+        Width="867.85"
+        StateChanged="OnStateChanged">
+
+    <Grid>
+        <DataGrid Name="DataGrid1"
+                  AutoGenerateColumns="False"
+                  Margin="27,105,45,42">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Header="Name" Binding="{Binding name}"/>
+                <DataGridTextColumn Width="*" Header="Url" Binding="{Binding url}"/>
+                <DataGridTextColumn Width="100" Header="Price" Binding="{Binding price}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox Name="CB" HorizontalAlignment="Left" Height="21" Margin="531,10,0,0" VerticalAlignment="Top" Width="286" SelectionChanged="CB_SelectionChanged"/>
+        <TextBox Name="Prod" HorizontalAlignment="Left" Height="10" Margin="84,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="359" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Категория" HorizontalAlignment="Left" Height="26" Margin="461,10,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.248,0.691"/>
+        <Label Content="Запрос" HorizontalAlignment="Left" Height="26" Margin="27,10,0,0" VerticalAlignment="Top" Width="57"/>
+    </Grid>
+</Controls:MetroWindow>
